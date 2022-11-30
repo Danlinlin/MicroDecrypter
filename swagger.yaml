@@ -1,0 +1,40 @@
+---
+swagger: "2.0"
+info:
+  description: "A tool that can crack encrpted passwords."
+  version: "2022-11-30T04:23:00Z"
+  title: "Swagger CrackStation"
+host: "do5prfdoyl.execute-api.us-east-1.amazonaws.com"
+basePath: "/prod"
+schemes:
+- "https"
+paths:
+  /password/{shaHash}:
+    get:
+      produces:
+      - "application/json"
+      parameters:
+      - name: "shaHash"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful return password"
+          schema:
+            $ref: "#/definitions/Success"
+        "404":
+          description: "Hash not found"
+          schema:
+            $ref: "#/definitions/Failure"
+definitions:
+  Success:
+    type: "object"
+    title: "Success Schema"
+    example: 
+        {"f62e2ae559db0107b0a5b1f597441d0af709b3a807eb3e4f98f5e05ef2774177" : "?6a"}
+  Failure:
+    type: "object"
+    title: "Failure Schema"
+    example: 
+        {"asdfjslakdjflkssdf177" : null}
