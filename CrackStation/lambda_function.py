@@ -38,7 +38,7 @@ def lambda_handler(event, context):
         res = decrypt(shaHash)
         print(res)
         if res is None:
-            response = buildResponse(404, shaHash, res)
+            response = buildResponse(404, shaHash, "Password not found")
         else:
             response = buildResponse(200, shaHash, res)
     else:
