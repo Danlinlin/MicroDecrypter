@@ -13,6 +13,8 @@ A service that can crack encrpted passwords.
 ## Usage
 
 ### Success Response
+
 <img width="714" alt="image" src="https://user-images.githubusercontent.com/101235319/220413117-f58ee7f9-1fe8-4bdd-b95f-9c1e3c1636b9.png">
 ### Failure Response
+
 <img width="734" alt="image" src="https://user-images.githubusercontent.com/101235319/220413179-0943a34b-2e1b-4d28-b1b3-31bc014d2154.png">
